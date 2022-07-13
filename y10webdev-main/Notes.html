@@ -8,13 +8,40 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body>
-    <div class = "container">
-        <div class="row">
-            <div class="container-fluid p-5 my-5 mx-2 bg-primary text-white container-xxl" style="width:100%">
-                <h1>page moved</h1>
+<body onload = "displayContent()" class = "mb-5">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">AutoDoc</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-success" aria-current="page" href="Overview.html">Overview</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="MedicalResults.html">Medical Results</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="PatientFamilyHistory.html">Patient Family & History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="Notes.html">Notes</a>
+                    </li>
+                    <li>
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    </li>
+                </ul>
+                <ul class = "navbar-nav px-3 mt-2 mt-md-0">
+                    <li class = "nav-item">
+                        <a id = 'signup' class = "btn btn-outline-success" href="signup.html">Sign Up</a>
+                        <a id = 'login' class = "btn bg-success text-white" href="login.html">Log In</a>
+                        <p id = 'welcome' style="display:none"></p>
+                        <button id = 'logout' class = "btn btn-outline-danger" onclick = "userLogout()" style="display:none;">Log Out</button>
+                    </li>
+                </ul>
+                
             </div>
         </div>
+    </nav>
 </body>
 
 </html>
