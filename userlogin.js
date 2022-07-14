@@ -1,18 +1,22 @@
 function createUser() {
   const http = new XMLHttpRequest();
-  const url = "https://etutor1.herokuapp.com/signup"
-  var email = document.getElementById("userEmail").value;
-  var password = document.getElementById("userPassword").value;
+  const url = "http://localhost:3000/signup"
+  // var email = document.getElementById("userEmail").value;
+  // var password = document.getElementById("userPassword").value;
   var fname = document.getElementById("fname").value;
   var lname = document.getElementById("lname").value;
-  var healthnum = document.getElementById("healthNum").value;
+  var healthnum = document.getElementById("healthnum").value;
+  var DOB = document.getElementById("DOB").value;
+  var RFV = document.getElementById("RFV").value;
+  var LOS = document.getElementById("LOS").value;
 
   var newUser = {
-    email_in: email, 
-    password_in: password,
     fname_in: fname,
     lname_in: lname,
     healthnum_in: healthnum,
+    DOB_in: DOB,
+    RFV_in: RFV,
+    LOS_in: LOS
   }
 
   http.open("POST", url, true);

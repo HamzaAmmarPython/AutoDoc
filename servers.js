@@ -5,7 +5,7 @@ var jsonParser = bodyParser.json()
 
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://admin:<admin>@autodoc.bpygk.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://admin:admin@autodoc.bpygk.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 //npx browser-sync start --server
 
@@ -14,17 +14,16 @@ var userResult = {
 }
 
 // used once to create a sample user
-function createUserDB(email, pass, name, lname) {
+function createUserDB(RFV, LOS, fname, lname, healthcard, DOB) {
     client.connect(err => {
-        var dbo = client.db("eTutor");
+        var dbo = client.db("AutoDocDatabase");
         var sampleUser = {
-            email: email,
-            password: pass,
-            firstname: name,
+            firstname: fname,
             lastname: lname,
-            unlocked_themes: [],
-            credits: 0,
-            skill_list: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+            healthcard: healthcard,
+            DOB: DOB,
+            RFV: RFV,
+            LOS:LOS,
         }
         dbo.collection("users").insertOne(sampleUser, function(err, res) {
             if (err) throw err;
@@ -111,7 +110,7 @@ app.post('/addquestion', jsonParser, function(req, res) {
 
 app.post('/signup', jsonParser, function(req, res) {
     console.log(req.body);
-    createUserDB(req.body.email_in, req.body.password_in, req.body.fname_in, req.body.lname_in);
+    createUserDB(req.body.fname_in, req.body.lname_in, req.body.healthnum_in, req.body.DOB_in, req.body.RFV_in, req.body.LOS_in);
 })
 
 app.post('/login', jsonParser, function(req, res) {
