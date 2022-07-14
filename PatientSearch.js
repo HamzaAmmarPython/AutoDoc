@@ -1,7 +1,12 @@
 searchbar = document.getElementsByClassName("Search").value;
 
 
-searchbar.addEventListenr
+document.addEventListener('keypress', function e(event){
+    if (e.keycode === 13){
+        console.log("Enter")
+       
+    }
+})
 
 function overviewFill() {
     document.getElementsByClassName("Name").value = sessionStorage.getItem("name");
