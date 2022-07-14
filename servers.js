@@ -5,7 +5,7 @@ var jsonParser = bodyParser.json()
 
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://user1:user1@cluster0.57irp.mongodb.net/cluster0?retryWrites=true&w=majority";
+const uri = "mongodb+srv://admin:<admin>@autodoc.bpygk.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 //npx browser-sync start --server
 
