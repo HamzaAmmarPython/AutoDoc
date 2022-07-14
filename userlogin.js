@@ -1,6 +1,6 @@
 function createUser() {
   const http = new XMLHttpRequest();
-  const url = "http://localhost:3000/signup"
+  const url = "https://etutor1.herokuapp.com/signup"
   // var email = document.getElementById("userEmail").value;
   // var password = document.getElementById("userPassword").value;
   var fname = document.getElementById("fname").value;
