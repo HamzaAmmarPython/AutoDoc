@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
-<body class = "mb-5">
+<body onload = "confirmUser()">
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">AutoDoc</a>
@@ -32,33 +32,32 @@
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     </li>
                 </ul>
-                <ul class="navbar-nav px-3 mt-2 mt-md-0">
-                    <li class="nav-item">
-                        <a id='signup' class="btn btn-outline-primary" href="signup.html">Sign Up</a>
-                        <a id='login' class="btn bg-primary text-white" href="login.html">Log In</a>
+                <ul class = "navbar-nav px-3 mt-2 mt-md-0">
+                    <li class = "nav-item">
+                        <a id='signup' class="btn btn-outline-success" href="signup.html">Sign Up</a>
+                        <a id='login' class="btn bg-success text-white" href="login.html">Log In</a>
                         <p id='welcome' style="display:none"></p>
-                        <button id='logout' class="btn btn-outline-danger" style="display:none;">Log Out</button>
+                        <button id='logout' class="btn btn-outline-danger" onclick = "userLogout()" style="display:none;">Log Out</button>
                     </li>
                 </ul>
-
             </div>
         </div>
     </nav>
-    <div>
-        <h2 id = "PatientName">Patient Name</h2>
-        <br>
-        <h2 id = "PatientAllergies">Patient Allergies</h2>
-        <br>
-        <h2 id = "Family History">Family Medical History</h2>
+    <div class = "container">
+        <div class="row">
+            <div class="container-fluid p-5 my-5 mx-2 bg-success text-white container-xxl" style="width:100%">
+                <h1>Add Patient</h1>
+            </div>
+        </div>
     </div>
-    <div>
-        <a id = "Add History" class = "btn bg-success text-white" href = "AddHistory.html">Add Patient History</a>
-    </div>
+    <div class = "container">
+        <h3>Allergies</h3>
+        <input type = "text" placeholder="Pollen, Peanuts, etc">
+        <h3>Important Family Info</h3>
+        <textarea name="w3review" rows="4" cols="50"></textarea>
+        <br>
+        <button id='Submit' class="btn btn-outline-success">Submit</button>
 
-    
+
     </div>
-    <script type="module" src="profile.js"></script>
-    <script src="https://kit.fontawesome.com/efa6cc6756.js" crossorigin="anonymous"></script>
 </body>
-
-</html>
