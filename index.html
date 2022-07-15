@@ -14,6 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">AutoDoc</a>
+            
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -28,16 +29,22 @@
                     <li class="nav-item">
                         <a class="nav-link text-success" href="Notes.html">Notes</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="CurrentMedications.html">Current Medications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="Perscription.html">Perscriptions</a>
+                    </li>
                     <li>
-                        <input class="form-control mr-sm-2 search" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     </li>
                 </ul>
                 <ul class = "navbar-nav px-3 mt-2 mt-md-0">
                     <li class = "nav-item">
-                        <a id = 'signup' class = "btn btn-outline-success" href="signup.html" style="display:inline">Add Patient</a>
-                        <a id = 'login' class = "btn bg-success text-white" href="login.html" style="display:inline">Log In</a>
+                        <a id = 'signup' class = "btn btn-outline-success" href="signup.html">Add Patient</a>
+                        <a id = 'login' class = "btn bg-success text-white" href="login.html">Find Patient</a>
                         <p id = 'welcome' style="display:none"></p>
-                        <button id = 'logout' class = "btn btn-outline-danger" onclick="userLogout()" style="display:none;">Log Out</button>
+                        <button id = 'logout' class = "btn btn-outline-danger" onclick = "userLogout()" style="display:none;">Log Out</button>
                     </li>
                 </ul>
                 
@@ -49,37 +56,6 @@
     <h1>Optimize your Hospital Experience</h1>
 </div> 
 
-<div class ="container-fluid bg-success text-white p-5">
-    <h1>Get Started</h1>
-</div>
-
-<div id = "grade-link-container" class = "container">
-    <div class = "row p-5">
-        <div class = "col text-center">
-            <button onclick = "summonPage('Arithmetic')" type="button" class="btn btn-success btn-lg p-4 px-5" style="border-radius: 15px">Grade 5</button>
-        </div>
-        <div class = "col text-center">
-            <button onclick = "summonPage('Integers')" type="button" class="btn btn-success btn-lg p-4 px-5" style="border-radius: 15px">Grade 6</button>
-        </div>
-        <div class = "col text-center">
-            <button onclick = "summonPage('Data Analysis')" type="button" class="btn btn-success btn-lg p-4 px-5" style="border-radius: 15px">Grade 7</button>
-        </div>
-        <div class = "col text-center">
-            <button onclick = "summonPage('Proportions')" type="button" class="btn btn-success btn-lg p-4 px-5" style="border-radius: 15px">Grade 8</button>
-        </div>
-        <div class = "col text-center">
-            <button onclick = "summonPage('The Coordinate System')" type="button" class="btn btn-success btn-lg p-4 px-5" style="border-radius: 15px">Grade 9</button>
-        </div>
-    </div>
-</div>
-
-<div class = "container-fluid bg-success text-white p-5">
-    <h1>Why Use AutoDoc?</h1>
-</div>
-
-<div class = "container-fluid p-3 m-3 mx-5">
-    <p>AutoDoc offers a variety of features including a file</p>
-</div>
     <script src="summon.js"></script>
 </body>
 
