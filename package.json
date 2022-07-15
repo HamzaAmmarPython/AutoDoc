@@ -15,5 +15,8 @@
     "mongodb": "^4.5.0",
     "mongoose": "^6.3.0",
     "npm": "^8.7.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }
