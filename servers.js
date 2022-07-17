@@ -110,6 +110,7 @@ app.post('/addquestion', jsonParser, function(req, res) {
 
 app.post('/signup', jsonParser, function(req, res) {
     console.log(req.body);
+    console.log("testing");
     createUserDB(req.body.fname_in, req.body.lname_in, req.body.healthnum_in, req.body.DOB_in, req.body.RFV_in, req.body.LOS_in);
 })
 
