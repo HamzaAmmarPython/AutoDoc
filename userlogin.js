@@ -1,6 +1,10 @@
 function createUser() {
   const http = new XMLHttpRequest();
+<<<<<<< HEAD
   const url = "/signup"
+=======
+  const url = "http://localhost:8081/signup.html#"
+>>>>>>> 2a695349d43034c32a66df51c174046c01722c26
   // var email = document.getElementById("userEmail").value;
   // var password = document.getElementById("userPassword").value;
   var fname = document.getElementById("fname").value;
